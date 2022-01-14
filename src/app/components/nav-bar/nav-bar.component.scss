@@ -1,0 +1,27 @@
+.navbar-nav .nav-item .nav-link {
+  color: var(--primary-color);
+}
+
+.nav-top {
+  position: relative;
+  z-index: 100;
+}
+
+.review {
+    position: relative;
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 2rem;
+  }
+  &::after {
+    content: "❞";
+    right: -2rem;
+  }
+  &::before {
+    content: "❝";
+    left: -2rem;
+  }
+}

@@ -1,0 +1,82 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.container-fluid {
+  padding: 0;
+  position: relative;
+  .form-position {
+    position: absolute;
+    top: 1em;
+    right: 5%;
+    width: 40%;
+    z-index: 10;
+  }
+}
+
+.custom-card {
+  width: 25rem;
+  margin-inline: 1rem;
+  margin-top: 1em;
+  height: 15rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  img {
+    position: relative;
+    object-fit: fill;
+    object-position: center;
+    max-height: 100%;
+    filter: grayscale(1.5) blur(0.5);
+    transition: 300ms ease;
+  }
+  .title {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 300ms ease;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+    .title {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.our-fleet {
+  .card {
+    max-width: 25rem;
+    overflow: hidden;
+    img {
+      transition: 300ms ease;
+      height: 50%;
+    }
+  }
+  .card:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container-fluid {
+    .form-position {
+      position: relative;
+      top: 0;
+      width: 94%;
+      overflow: hidden;
+      left: 0;
+      right: 0;
+    }
+  }
+}

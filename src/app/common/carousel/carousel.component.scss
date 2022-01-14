@@ -1,0 +1,67 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.carousel-inner {
+  height: 32rem;
+  .carousel-item {
+    height: 100%;
+    .carousel-caption {
+      text-align: left;
+      left: 5%;
+      bottom: 10%;
+      right: unset;
+      max-width: 40%;
+      user-select: none;
+      h5 {
+        background-color: rgba(218, 165, 32, 0.9);
+        line-height: 3rem;
+        color: black;
+      }
+      p {
+        background-color: rgba(255, 255, 255, 0.2);
+        line-height: 3rem;
+      }
+    }
+    img {
+      width: 100%;
+      filter: brightness(0.8);
+    }
+  }
+}
+.carousel-indicators {
+  justify-content: left;
+  .active {
+    background-color: white;
+  }
+  button {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 100%;
+    border: 2px solid white;
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .carousel-inner {
+    height: 22rem;
+    .carousel-item {
+      .carousel-caption {
+        text-align: center;
+        bottom: 10%;
+        left: 5%;
+        right: 5%;
+        top: 0.5rem;
+        max-width: 95%;
+        h5 {
+          line-height: 1.7rem;
+        }
+        p {
+          line-height: 1.7rem;
+        }
+      }
+    }
+  }
+}
