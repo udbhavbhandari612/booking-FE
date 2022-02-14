@@ -7,8 +7,17 @@
   z-index: 100;
 }
 
+:host::ng-deep.navbar-brand {
+  max-height: 5.5rem !important;
+  overflow: hidden;
+  img {
+    max-height: 100%;
+    max-width: 5.5rem;
+  }
+}
+
 .review {
-    position: relative;
+  position: relative;
   &::after,
   &::before {
     position: absolute;

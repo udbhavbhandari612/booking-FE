@@ -1,0 +1,9 @@
+<div class="container my-5">
+    <div class="fs-4 fw-bold mb-5">Terms and Conditions / Reservation Agreement :</div>
+    <div class="d-flex flex-wrap justify-content-sm-between justify-content-center">
+        <div class="detail-cards py-5 px-4" *ngFor="let content of contents">
+            <div class="heading fs-4 fw-bold lh-lg text-uppercase mb-4">{{content.header}} :-</div>
+            <div class="content fs-6 text-muted lh-lg">{{content.content}}</div>
+        </div>
+    </div>
+</div>

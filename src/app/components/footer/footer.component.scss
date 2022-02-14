@@ -1,0 +1,27 @@
+.container {
+    .intro {
+        max-width: 35%;
+        img {
+            max-width: 9rem;
+            object-fit: contain;
+        }
+    }
+}
+
+:host::ng-deep.nav-link { 
+    color: #daa520;
+}
+:host::ng-deep mat-icon { 
+    color: #daa520;
+}
+
+.copyrights {
+    background-color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.03rem;
+}
+
+@media screen and (max-width : 500px) {
+    .intro {
+        max-width: 100% !important;
+    }
+}

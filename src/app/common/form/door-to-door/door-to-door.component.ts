@@ -75,6 +75,17 @@ export class DoorToDoorComponent implements OnInit {
       return
     }
 
+    let bookhour = new Date(this.formGroup.get('date').value)
+    bookhour.setHours(this.formGroup.get('time').value.split(':')[0])
+    bookhour.setMinutes(this.formGroup.get('time').value.split(':')[1])
+
+    let twohour = new Date();
+    twohour.setHours(twohour.getHours() + 2);
+    if (twohour >= bookhour) {
+      alert('Cannot book ride for 2 hours from now')
+      return
+    }
+
     const data = {
       start: this.start.place_id,
       destination: this.destination.place_id,

@@ -1,7 +1,7 @@
 <div class="sticky-top">
     <div class="nav-top d-flex bg-dark text-light justify-content-between">
         <a class="navbar-brand p-2" [routerLink]="[ '/']">
-            <img src="../../../assets/logo.png">
+            <img src="../../../assets/logo.jpeg">
         </a>
         <div class="testimonial-section align-self-center d-none d-sm-block">
             <figure class="review">
@@ -18,12 +18,9 @@
             <a href="tel:+1(212)366-6600" class="text-decoration-none">
                 <div class="fw-bold color-primary">CALL US +1 (212) 366-6600</div>
             </a>
-            <button class="ms-auto color-primary" (click)="navState=!navState" mat-icon-button>
-                <mat-icon>menu</mat-icon>
-            </button>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" [@openClose]='navState ? "open" : "closed"'>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -36,16 +33,6 @@
                     <li class="nav-item">
                         <a class="nav-link fs-6" aria-current="page" [routerLink]="[ '/']">Home</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fs-6" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Fleets
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li *ngFor="let vehicle of vehicles"><a [routerLink]="[ '/about-us']"
-                                    class="dropdown-item py-2">{{vehicle.name}}</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link fs-6" [routerLink]="[ '/our-fleets']">Our Fleets</a>
                     </li>
@@ -55,6 +42,9 @@
                     <li class="nav-item">
                         <a class="nav-link fs-6" [routerLink]="[ '/about-us']">About Us</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link fs-6" [routerLink]="[ '/terms-conditions-privacy-policy']">Terms and Conditions & Privacy policy</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link fs-6" [routerLink]="[ '/contact-us']">Contact Us</a>
                     </li>

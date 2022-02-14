@@ -21,6 +21,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { OurFleetsComponent } from './components/our-fleets/our-fleets.component';
 import { OurServicesComponent } from './components/our-services/our-services.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { OurServicesComponent } from './components/our-services/our-services.com
     CheckoutComponent,
     FooterComponent,
     OurFleetsComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     BrowserModule,

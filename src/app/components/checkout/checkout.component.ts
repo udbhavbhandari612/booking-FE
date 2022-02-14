@@ -53,92 +53,6 @@ export class CheckoutComponent implements OnInit {
       .pipe(map(({ matches }) => (matches ? 'horizontal' : 'vertical')));
 
     this.data = history.state.data
-    // = {
-    //   "distance": {
-    //     "text": "1,331 mi",
-    //     "value": 2142187
-    //   },
-    //   "duration": {
-    //     "text": "19 hours 57 mins",
-    //     "value": 71815
-    //   },
-    //   "destination_address": "New York Botanical Garden, 2900 Southern Blvd, Bronx, NY 10458, USA",
-    //   "origin_address": "Louis Armstrong New Orleans International Airport (MSY), Louis Armstrong New Orleans International Airport, 1 Terminal Dr, Kenner, LA 70062, USA",
-    //   "date": "2021-11-29T18:30:00.000Z",
-    //   "time": "12:09 PM",
-    //   "rideType": "from-airport",
-    //   "toll_price": 0,
-    //   "rush_hour_price": 0,
-    //   "vehicles": [
-    //     {
-    //       "total_fare": 22502,
-    //       "id": "xuv_300",
-    //       "name": "XUV 300",
-    //       "photos": [
-    //         {
-    //           "filename": "xuv_300_1636292755646.jpeg",
-    //           "size": 476211,
-    //           "mimetype": "image/jpeg",
-    //           "path": "http://localhost:4000/images/xuv_300/xuv_300_1636292755646.jpeg"
-    //         },
-    //         {
-    //           "filename": "xuv_300_1636292755653.png",
-    //           "size": 574743,
-    //           "mimetype": "image/png",
-    //           "path": "http://localhost:4000/images/xuv_300/xuv_300_1636292755653.png"
-    //         }
-    //       ],
-    //       "passenger_capacity": 5,
-    //       "child_seat_capacity": 2,
-    //       "luggage_capacity": 5
-    //     },
-    //     {
-    //       "total_fare": 19870,
-    //       "id": "xuv_500",
-    //       "name": "XUV 500",
-    //       "photos": [
-    //         {
-    //           "filename": "xuv_500_1636292504579.png",
-    //           "size": 141932,
-    //           "mimetype": "image/png",
-    //           "path": "http://localhost:4000/images/xuv_500/xuv_500_1636292504579.png"
-    //         },
-    //         {
-    //           "filename": "xuv_500_1636292504583.png",
-    //           "size": 134552,
-    //           "mimetype": "image/png",
-    //           "path": "http://localhost:4000/images/xuv_500/xuv_500_1636292504583.png"
-    //         }
-    //       ],
-    //       "passenger_capacity": 5,
-    //       "child_seat_capacity": 2,
-    //       "luggage_capacity": 5
-    //     },
-    //     {
-    //       "total_fare": 33225,
-    //       "id": "rolls_royce",
-    //       "name": "Rolls Royce",
-    //       "photos": [
-    //         {
-    //           "filename": "rolls_royce_1636297450646.jpg",
-    //           "size": 172838,
-    //           "mimetype": "image/jpeg",
-    //           "path": "http://localhost:4000/images/rolls_royce/rolls_royce_1636297450646.jpg"
-    //         },
-    //         {
-    //           "filename": "rolls_royce_1636297450649.jpg",
-    //           "size": 73681,
-    //           "mimetype": "image/jpeg",
-    //           "path": "http://localhost:4000/images/rolls_royce/rolls_royce_1636297450649.jpg"
-    //         }
-    //       ],
-    //       "passenger_capacity": 6,
-    //       "child_seat_capacity": 3,
-    //       "luggage_capacity": 6
-    //     }
-    //   ]
-    // }
-    // this.selectedVehicle = this.data.vehicles[0]
     if (!history.state.data) {
       alert('No data passed')
       this.router.navigateByUrl('/')
@@ -233,7 +147,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   getTotalFare(formatted?: boolean) {
-    const price = ((this.data.toll_price || 0) + (this.data.rush_hour_price || 0) + (this.selectedVehicle?.total_fare || 0) + (this.selectedVehicle?.child_seats || 0) * 5) || 0
+    const price = ((this.data.toll_price || 0) + (this.data.morning_rush_hour_price || 0) + (this.data.night_Frush_hour_price || 0) + (this.selectedVehicle?.total_fare || 0) + (this.selectedVehicle?.child_seats || 0) * 5) || 0
     return formatted ? formatNumber(price, null, '1.2-2') : price
   }
 

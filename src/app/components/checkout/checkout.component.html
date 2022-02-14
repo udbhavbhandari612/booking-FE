@@ -235,9 +235,14 @@
                                         <td class="text-end pe-2">${{data.toll_price | number: '1.2-2'}}
                                         </td>
                                     </tr>
-                                    <tr *ngIf="data.rush_hour_price">
-                                        <td class="text-black-50">rush hour surge</td>
-                                        <td class="text-end pe-2">${{data.rush_hour_price | number: '1.2-2'}}
+                                    <tr *ngIf="data.morning_rush_hour_price">
+                                        <td class="text-black-50">mornign rush hour surge</td>
+                                        <td class="text-end pe-2">${{data.morning_rush_hour_price | number: '1.2-2'}}
+                                        </td>
+                                    </tr>
+                                    <tr *ngIf="data.night_rush_hour_price">
+                                        <td class="text-black-50">night rush hour surge</td>
+                                        <td class="text-end pe-2">${{data.night_rush_hour_price | number: '1.2-2'}}
                                         </td>
                                     </tr>
                                     <tr>
