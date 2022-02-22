@@ -1,5 +1,10 @@
 .navbar-nav .nav-item .nav-link {
   color: var(--primary-color);
+  opacity: 0.6;
+}
+
+.active .nav-link {
+  opacity: 1 !important;
 }
 
 .nav-top {
@@ -8,12 +13,19 @@
 }
 
 :host::ng-deep.navbar-brand {
-  max-height: 5.5rem !important;
+  max-height: 4rem !important;
   overflow: hidden;
   img {
     max-height: 100%;
-    max-width: 5.5rem;
+    object-fit: contain;
+    object-position: 0 -0.5rem;
+    max-width: 5rem;
   }
+}
+
+:host::ng-deep.navbar {
+  background-color: rgb(0, 0, 0) !important;
+  box-shadow: 0 1px 15px -8px darkgrey;
 }
 
 .review {

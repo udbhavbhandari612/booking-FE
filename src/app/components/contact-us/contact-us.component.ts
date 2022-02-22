@@ -12,4 +12,8 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit(){
+    alert('your query has been submitted.')
+  }
+
 }

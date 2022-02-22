@@ -1,5 +1,5 @@
 <app-nav-bar></app-nav-bar>
-<div [@routeAnimations]='outlet.isActivated ? outlet.activatedRoute : ""'>
+<div [@routeAnimations]='outlet.isActivated ? outlet.activatedRoute : ""' style="min-height: 80vh;">
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-footer class="pb-5"></app-footer>
