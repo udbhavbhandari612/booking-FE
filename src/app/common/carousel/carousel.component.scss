@@ -46,8 +46,13 @@
 
 @include media-breakpoint-down(sm) {
   .carousel-inner {
-    height: 22rem;
+    height: 18rem;
     .carousel-item {
+      img {
+        width: unset;
+        height: 100%;
+        object-fit: contain;
+      }
       .carousel-caption {
         text-align: center;
         bottom: 10%;
